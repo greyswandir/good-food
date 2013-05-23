@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<s:BorderContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                   xmlns:s="library://ns.adobe.com/flex/spark"
+                   xmlns:mx="library://ns.adobe.com/flex/mx"
+                   backgroundColor="0xd4eafa" contentBackgroundAlpha=".5">
+
+    <fx:Script><![CDATA[
+        import bro.goodFood.services.BaseRemoteInvoker;
+
+        private function salute():void {
+            var s:BaseRemoteInvoker = new BaseRemoteInvoker();
+
+            s.runHelloWorld();
+        }
+        ]]></fx:Script>
+
+
+    <mx:LinkButton label="Открыть Корзину" top="5" right="5" click="salute()"/>
+
+    <mx:HRule width="90%" top="30" right="0" />
+
+
+    <s:Panel title="Content" verticalCenter="0" horizontalCenter="0">
+        <s:Label text="content here"/>
+    </s:Panel>
+
+</s:BorderContainer>
